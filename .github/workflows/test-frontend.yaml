@@ -13,9 +13,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '16'
+      - run: |
+          cd frontend
+          npm ci
       - name: Angular Full CI
         uses: colbyhill21/angular-full-ci/@v1.0
         with:
-          testcommand: cd frontend && npm ci && run test
+          testcommand: cd frontend && run test
           mocha: true
+      
 
