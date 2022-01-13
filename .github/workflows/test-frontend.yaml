@@ -19,7 +19,7 @@ jobs:
       - name: Angular Full CI
         uses: colbyhill21/angular-full-ci/@v1.0
         with:
-          testcommand: cd frontend && run test
+          testcommand: cd frontend && echo ls && echo pwd && run test
           mocha: true
       
 
